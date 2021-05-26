@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>00:00:00</title>
+        <title>Tomatinho</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
@@ -9,14 +9,17 @@
     </head>
     <body>
         <main class="app">
-            <nav class="app__bar">
-                <button class="window-button window-button--minimize">
-                    <p class="text">_</p>
-                </button>
-                <button class="window-button window-button--close">
-                    <p class="text">x</p>
-                </button>
-            </nav>
+            <div class="app__bar">
+                <p class="window-title">Tomatinho</p>
+                <nav class="window-buttons">
+                    <button class="window-button window-button--minimize">
+                        <p class="text">_</p>
+                    </button>
+                    <button class="window-button window-button--close">
+                        <p class="text">x</p>
+                    </button>
+                </nav>
+            </div>
             <div class="app__body">
                 <div class="pomodoro-counter">
                     <div class="pomodoro-counter__dot"></div>
@@ -25,7 +28,7 @@
                     <div class="pomodoro-counter__dot"></div>
                 </div>
                 <h3 class="text text--current-state">Pomodoro 🍅</h3>
-                <h1 class="text text--timer">00:00:00</h1>
+                <h1 class="text text--timer">00:00</h1>
                 <nav class="state-buttons">
                     <button label="pomodoro" class="state-button state-button--set-pomodoro-state">🍅</button>
                     <button label="short break" class="state-button state-button--set-short-break-state">☕</button>

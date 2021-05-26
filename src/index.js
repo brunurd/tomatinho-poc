@@ -1,24 +1,30 @@
 const { app, BrowserWindow } = require('electron');
-const path = require('path');
+const { resolve } = require('path');
+const { initialize } = require('@electron/remote/main');
 
 let mainWindow;
 
 const IS_DEV = process.env.NODE_ENV === 'development';
 
 if (IS_DEV) {
-  const srcPath = path.join(__dirname);
-  const electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
-  require('electron-reload')(srcPath, { electron: electronPath });
+  const srcPath = resolve(__dirname);
+  require('electron-reload')(srcPath);
 }
 
 const start = () => {
   mainWindow = new BrowserWindow({
     width: 180,
-    height: 203,
+    height: 230,
     maxWidth: 180,
-    maxHeight: 203,
+    maxHeight: 230,
     frame: false,
     transparent: true,
+    webPreferences: {
+      nodeIntegration: false,
+      enableRemoteModule: true,
+      worldSafeExecuteJavaScript: true,
+      preload: resolve(__dirname, 'preload.js'),
+    },
   });
 
   mainWindow.setMenu(null);
@@ -30,4 +36,5 @@ const start = () => {
 
 app.whenReady().then(() => {
   start();
-})
+  initialize();
+});

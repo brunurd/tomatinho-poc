@@ -10,7 +10,7 @@ const APP_STATE = {
   currentTimeEnd: INITIAL_TIME.clone().add(25, 'minute'),
   currentTime: INITIAL_TIME.clone(),
   currentState: STATES.pomodoro,
-  currentTimerDisplay: '00:00:00',
+  currentTimerDisplay: '00:00',
 }
 const ELEMENTS = {
   timer: document.querySelector('.text--timer'),
@@ -36,19 +36,20 @@ const onSequenceEnd = () => {
     APP_STATE.pomodoroCounts += 1;
   }
 
-  if (APP_STATE.currentState === STATES.shortBreak && APP_STATE.pomodoroCounts < 4) {
+  else if (APP_STATE.currentState === STATES.shortBreak && APP_STATE.pomodoroCounts < 4) {
     APP_STATE.currentTimeEnd = APP_STATE.currentTime.clone().add(25, 'minute');
     APP_STATE.currentState = STATES.pomodoro;
     APP_STATE.pomodoroCounts += 1;
   }
 
-  if (APP_STATE.pomodoroCounts >= 4) {
+  else if (APP_STATE.pomodoroCounts >= 4) {
     APP_STATE.currentTimeEnd = APP_STATE.currentTime.clone().add(25, 'minute');
     APP_STATE.currentState = STATES.longBreak;
     APP_STATE.pomodoroCounts = 0;
   }
 
   currentState.innerHTML = APP_STATE.currentState;
+  document.title = APP_STATE.currentState;
   updatePomodoroCounterDots();
 };
 
@@ -66,7 +67,7 @@ const update = () => {
   time.subtract(APP_STATE.currentTimeStart.minute(), 'minute');
   time.subtract(APP_STATE.currentTimeStart.second(), 'second');
 
-  currentTimerDisplay = time.format('HH:mm:ss');
+  currentTimerDisplay = time.format('mm:ss');
   ELEMENTS.timer.innerHTML = currentTimerDisplay;
 };
 
