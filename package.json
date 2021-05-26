@@ -13,6 +13,8 @@
     "concurrently": "^6.2.0",
     "electron": "^13.0.1",
     "electron-reload": "^1.5.0",
+    "rollup": "^2.50.1",
+    "rollup-plugin-terser": "^7.0.2",
     "stylus": "^0.54.8"
   }
 }

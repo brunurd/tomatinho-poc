@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 - Window title
+- Rollup to js transpilation
+- Close button action
+- Minimize button action
 
 ### Fixes
 - Remove hour from timer

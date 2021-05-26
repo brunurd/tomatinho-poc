@@ -1,9 +1,11 @@
 const INITIAL_TIME = moment();
+
 const STATES = {
   pomodoro: 'Pomodoro 🍅',
   shortBreak: 'Short Break ☕',
   longBreak: 'Long Break 🕹️',
 }
+
 const APP_STATE = {
   pomodoroCounts: 0,
   currentTimeStart: INITIAL_TIME.clone(),
@@ -12,6 +14,7 @@ const APP_STATE = {
   currentState: STATES.pomodoro,
   currentTimerDisplay: '00:00',
 }
+
 const ELEMENTS = {
   timer: document.querySelector('.text--timer'),
   currentState: document.querySelector('.text--current-state'),
@@ -71,7 +74,4 @@ const update = () => {
   ELEMENTS.timer.innerHTML = currentTimerDisplay;
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  updatePomodoroCounterDots();
-  setInterval(update, 1000);
-});
+export { updatePomodoroCounterDots, update };

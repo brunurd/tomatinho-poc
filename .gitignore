@@ -3,3 +3,6 @@
 
 # stylus
 /src/style.min.css
+
+# rollup
+/src/js.min.js
