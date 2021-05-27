@@ -1,20 +1,45 @@
 {
   "private": true,
   "name": "tomatinho",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A desktop Pomodoro timer app.",
   "main": "src/index.js",
   "scripts": {
     "electron": "electron .",
-    "start": "./scripts/start"
+    "start": "./scripts/start",
+    "icons": "png2icons ./assets/icons/tomatinho.png ./assets/icons/tomatinho -all -bc -i",
+    "dist:win": "electron-builder --win --x64",
+    "dist:linux": "electron-builder --linux --x64",
+    "dist:mac": "electron-builder --mac --x64"
+  },
+  "dependencies": {
+    "@electron/remote": "^1.1.0"
   },
   "devDependencies": {
-    "@electron/remote": "^1.1.0",
     "concurrently": "^6.2.0",
     "electron": "^13.0.1",
+    "electron-builder": "^22.10.5",
     "electron-reload": "^1.5.0",
+    "png2icons": "^2.0.1",
     "rollup": "^2.50.1",
     "rollup-plugin-terser": "^7.0.2",
     "stylus": "^0.54.8"
+  },
+  "build": {
+    "appId": "com.brunurd.tomatinho",
+    "productName": "Tomatinho",
+    "files": "src/**/*",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "default",
+      "icon": "assets/icons/tomatinho.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/tomatinho.ico"
+    },
+    "nsis": {
+      "artifactName": "${productName} ${version}.exe"
+    }
   }
 }

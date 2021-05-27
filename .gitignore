@@ -6,3 +6,6 @@
 
 # rollup
 /src/js.min.js
+
+# electron-builder
+/dist/

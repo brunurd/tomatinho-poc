@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## WIP
+## [0.1.1] - 2021-05-26
 
 ### Added
 - Window title
@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Close button action
 - Minimize button action
 - Pause and play button
+- Electron builder
+- App icon
 
 ### Fixes
 - Remove hour from timer

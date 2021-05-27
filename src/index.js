@@ -19,6 +19,7 @@ const start = () => {
     maxHeight: 180,
     frame: false,
     transparent: true,
+    icon: resolve(__dirname, 'tomatinho.png'),
     webPreferences: {
       nodeIntegration: false,
       enableRemoteModule: true,
