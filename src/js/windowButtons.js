@@ -5,7 +5,7 @@ const getElements = () => {
   }
 }
 
-const applyActions = () => {
+const applyWindowActions = () => {
   const api = window.TOMATINHO_API;
   const elements = getElements();
 
@@ -13,4 +13,4 @@ const applyActions = () => {
   elements.closeButton.addEventListener('click', api.close);
 };
 
-export { applyActions };
+export { applyWindowActions };

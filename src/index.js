@@ -14,9 +14,9 @@ if (IS_DEV) {
 const start = () => {
   mainWindow = new BrowserWindow({
     width: 180,
-    height: 230,
+    height: 180,
     maxWidth: 180,
-    maxHeight: 230,
+    maxHeight: 180,
     frame: false,
     transparent: true,
     webPreferences: {

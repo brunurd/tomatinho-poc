@@ -13,9 +13,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Rollup to js transpilation
 - Close button action
 - Minimize button action
+- Pause and play button
 
 ### Fixes
 - Remove hour from timer
+- Timer logic
 
 ---
 
