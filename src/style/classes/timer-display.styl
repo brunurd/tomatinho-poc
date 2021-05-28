@@ -4,10 +4,19 @@
   align-items baseline
 
   &__pause-play-button
-    color #b6b4bf66
-    margin-left 8px
+    margin-left 5px
     font-size 12px
     cursor pointer
 
+    .dark-theme &
+      color #b6b4bf66
+
+    .light-theme &
+      color #908bad
+
     &:hover
-      color #b6b4bf
+      .dark-theme &
+        color #b6b4bf
+
+      .light-theme &
+        color #1e1c26

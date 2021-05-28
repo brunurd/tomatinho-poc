@@ -1,6 +1,7 @@
 const INITIAL_TIME = moment();
 
 window.TIMER_ELEMENTS = {
+  app: document.querySelector('.app'),
   timer: document.querySelector('.text--timer'),
   currentState: document.querySelector('.text--current-state'),
   pomodoroCounterDots: document.querySelectorAll('.pomodoro-counter__dot'),

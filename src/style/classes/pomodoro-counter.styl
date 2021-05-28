@@ -3,13 +3,22 @@
   display flex
   flex-direction row
   justify-content space-between
-  margin 0 0 15px
+  margin 0 0 7px
 
   &__dot
-    background-color #1e1c26
-    width 8px
-    height 8px
+    width 6px
+    height 6px
     border-radius 10px
 
+    .dark-theme &
+      background-color #1e1c26
+
+    .light-theme &
+      background-color #908bad
+
     &--done
-      background-color #4c485c
+      .dark-theme &
+        background-color #4c485c
+
+      .light-theme &
+        background-color #1e1c26

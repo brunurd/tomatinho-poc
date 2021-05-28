@@ -1,7 +1,13 @@
 .app
   -webkit-app-region drag
-  background-color #282630
   overflow hidden
+  opacity 0.95
+
+  &.dark-theme
+    background-color #282630
+
+  &.light-theme
+    background-color #e1e5ed
 
   & * *
     -webkit-app-region no-drag
@@ -12,7 +18,12 @@
     flex-direction row
     justify-content space-between
     align-items center
-    background-color #1e1c26
+
+    .dark-theme &
+      background-color #1e1c26
+
+    .light-theme &
+      background-color #908bad
 
   &__body
     text-align center
@@ -20,4 +31,4 @@
     flex-direction column
     align-items center
     justify-content center
-    padding 20px 0
+    padding 15px 0

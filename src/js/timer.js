@@ -8,20 +8,32 @@ const updatePomodoroCounterDots = () => {
 }
 
 const onSequenceEnd = () => {
+  const api = window.TOMATINHO_API;
+  api.restore();
+
+  const audio = new Audio('assets/sounds/alarm.mp3');
+  audio.play();
+
   APP_STATE.currentTimeStart = APP_STATE.currentTime.clone();
 
   if (APP_STATE.currentState === STATES.pomodoro && APP_STATE.pomodoroCounts < 4) {
+    TIMER_ELEMENTS.app.classList.add('light-theme');
+    TIMER_ELEMENTS.app.classList.remove('dark-theme');
     APP_STATE.currentTimeEnd = APP_STATE.currentTime.clone().add(SETTINGS.shortBreakLength, 'minute');
     APP_STATE.currentState = STATES.shortBreak;
   }
 
   else if ((APP_STATE.currentState === STATES.shortBreak || APP_STATE.currentState === STATES.longBreak) && APP_STATE.pomodoroCounts < 4) {
+    TIMER_ELEMENTS.app.classList.remove('light-theme');
+    TIMER_ELEMENTS.app.classList.add('dark-theme');
     APP_STATE.currentTimeEnd = APP_STATE.currentTime.clone().add(SETTINGS.pomodoroLength, 'minute');
     APP_STATE.currentState = STATES.pomodoro;
     APP_STATE.pomodoroCounts += 1;
   }
 
   else if (APP_STATE.pomodoroCounts >= 4) {
+    TIMER_ELEMENTS.app.classList.add('light-theme');
+    TIMER_ELEMENTS.app.classList.remove('dark-theme');
     APP_STATE.currentTimeEnd = APP_STATE.currentTime.clone().add(SETTINGS.longBreakLength, 'minute');
     APP_STATE.currentState = STATES.longBreak;
     APP_STATE.pomodoroCounts = 0;

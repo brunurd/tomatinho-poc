@@ -1,1 +1,16 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600"><defs><style>.cls-1{fill:url(#radial-gradient);}.cls-2{fill:#1d1d1b;opacity:0.3;}.cls-3{fill:#39c67c;}</style><radialGradient id="radial-gradient" cx="300" cy="331.38" r="268.62" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#c61e3f"/><stop offset="0.35" stop-color="#c41e3f"/><stop offset="0.55" stop-color="#bc1e3f"/><stop offset="0.71" stop-color="#ae1e3f"/><stop offset="0.84" stop-color="#9a1e3f"/><stop offset="0.97" stop-color="#811e3f"/><stop offset="1" stop-color="#791e3f"/></radialGradient></defs><circle class="cls-1" cx="300" cy="331.38" r="268.62"/><path class="cls-2" d="M300,269.26l145.67-163.6A269,269,0,0,0,190,86.23Z"/><polygon class="cls-3" points="300 269.26 105.23 0 494.77 0 300 269.26"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C61E3F;}
+	.st1{opacity:0.3;fill:#1D1D1B;enable-background:new    ;}
+	.st2{fill:#39C67C;}
+	.st3{fill:#791E3F;}
+</style>
+<circle class="st0" cx="299.7" cy="331.4" r="268.6"/>
+<path class="st1" d="M300,269.3l145.7-163.6C369.2,56.4,273,49.1,190,86.2L300,269.3z"/>
+<polygon class="st2" points="299.7,269.3 104.9,0 494.4,0 "/>
+<path class="st3" d="M299.7,475.3c-106.5,0-201.3-33.5-262.2-85.6C64.1,510,171.3,600,299.7,600s235.6-90,262.2-210.3
+	C501,441.8,406.2,475.3,299.7,475.3z"/>
+</svg>

@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.2.0] - 2021-05-27
+
+### Added
+- Theme management
+- Light theme created
+- Restore window on period end
+- Alarm on period end
+- Transition on all elements
+
+### Changed
+- Icon update
+
+---
+
 ## [0.1.1] - 2021-05-26
 
 ### Added

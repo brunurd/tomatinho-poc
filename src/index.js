@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu, Tray } = require('electron');
 const { resolve } = require('path');
 const { initialize } = require('@electron/remote/main');
 
@@ -11,15 +11,15 @@ if (IS_DEV) {
   require('electron-reload')(srcPath);
 }
 
-const start = () => {
+const startWindow = () => {
   mainWindow = new BrowserWindow({
-    width: 180,
-    height: 180,
-    maxWidth: 180,
-    maxHeight: 180,
+    width: 160,
+    height: 150, // 190,
+    maxWidth: 160,
+    maxHeight: 150, // 190,
     frame: false,
     transparent: true,
-    icon: resolve(__dirname, 'tomatinho.png'),
+    icon: resolve(__dirname, 'assets', 'images', 'tomatinho.png'),
     webPreferences: {
       nodeIntegration: false,
       enableRemoteModule: true,
@@ -36,6 +36,6 @@ const start = () => {
 }
 
 app.whenReady().then(() => {
-  start();
+  startWindow();
   initialize();
 });

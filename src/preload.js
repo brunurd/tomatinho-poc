@@ -1,4 +1,4 @@
-const { contextBridge } = require('electron')
+const { contextBridge , Menu, Tray } = require('electron');
 const remote = require('@electron/remote');
 
 const mainWindow = remote.getCurrentWindow();
@@ -11,6 +11,9 @@ contextBridge.exposeInMainWorld(
     },
     close: () => {
       mainWindow.close();
+    },
+    restore: () => {
+      mainWindow.restore();
     },
   },
 );
